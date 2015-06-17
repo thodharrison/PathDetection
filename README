@@ -1,0 +1,26 @@
+This is a toolkit used for first filtering out reads mapping to a reference genome and then mapping those remaining reads to a database file of pathogens, thus getting the overall depth and coverage of thos reads in regards to a the pathogens. This pipeline was originally written by Basir Shariat, however, The project was then passed on to me and I made mad some fairly heavy modifications.  
+
+Of this toolkit I wrote:
+
+convertSamToFastq.sh
+trimContaminants.py
+
+Of this toolkit I modified:
+
+pathogen_detection.py 
+
+
+Functions that I wrote in pathogen_detection.py: 
+processSamFile(binaryMask,samFileName,fastqPrefix,isChrom,ResFile)
+calcStats(depthTables,alignmentCounts,isChrom,ResFile)
+dumpFastqFiles(readsToFastq,fqReads)
+addToCoverageMap(mapping,alignmentCounts,depthTables)
+getAllMappings(fields)
+
+Functions that I modified in pathogen_detection.py:
+align_reads_to_references(genomes, fr, rr, output_dir, clean)
+align_reads_to_pathogens(genomes, reads, output_dir, clean)
+assemble_remaining_reads(filteredReads, output_dir)
+main()
+
+-Thomas

@@ -9,7 +9,7 @@ from os import listdir
 from os.path import isfile, join
 from bioservices import *
 
-__author__ = 'basir'
+__author__ = ('Thomas','basir')
 temp_dir = 'tmp'
 pathogen_dir = 'pathogens'
 ass_dir = 'assembly'
